@@ -1,0 +1,39 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <%= image_tag current_user.gravatar_url(default: 'identicon'), class: "img-circle", alt: "User Image" %>
+      </div>
+      <div class="pull-left info">
+        <p><%= current_user.email %></p>
+        <!-- Status -->
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+
+    <!-- search form (Optional) -->
+
+    <!-- /.search form -->
+
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu">
+      <li class="header">MENU</li>
+      <!-- Optionally, you can add icons to the links -->
+      <li class=""><%= link_to "<i class='ion ion-ios-pulse'></i> <span>DIDs</span>".html_safe, dids_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-globe'></i> <span>Global DIDs</span>".html_safe, global_dids_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-phone'></i> <span>Areas</span>".html_safe, areas_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-street-view'></i> <span>Cities</span>".html_safe, cities_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-university'></i> <span>States</span>".html_safe, states_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-flag'></i> <span>Countries</span>".html_safe, countries_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-terminal'></i> <span>Logs</span>".html_safe, logs_path %></li>
+      <li class=""><%= link_to "<i class='fa fa-user'></i> <span>Users</span>".html_safe, users_path if current_user.admin? %></li>
+
+    </ul><!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>
