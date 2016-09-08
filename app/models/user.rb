@@ -6,5 +6,4 @@ class User < ActiveRecord::Base
 
   # Markable setup
   acts_as_marker
-  markable_as :involved
 end
