@@ -21,20 +21,7 @@
 		<link rel="apple-touch-icon" sizes="144x144" href="<%= asset_path 'apple-touch-icon-144x144.png' %>" />
 		<link rel="apple-touch-icon" sizes="152x152" href="<%= asset_path 'apple-touch-icon-152x152.png' %>" />
 	</head>
-	<body class="fixed skin-black" data-spy="scroll" data-target="#scrollspy">
-		<div style='position: relative' class='wrapper'>
-			<%= render 'layouts/partials/header' %>
-			<%= render 'layouts/partials/main_sidebar' %>
-			<div class='content-wrapper'>
-				<%= render 'layouts/partials/alerts' %>
-				<%= yield %>
-			</div>
-			<footer class="main-footer">
-		        <div class="pull-right hidden-xs">
-		          LookingGlass
-		        </div>
-      			<strong>Copyright &copy; <%= Date.today.year %> <a href="#">Transtelco</a>.</strong> All rights reserved.
-    		</footer>	
-		</div>
+	<body>
+	<%= yield %>
 	</body>
 </html>

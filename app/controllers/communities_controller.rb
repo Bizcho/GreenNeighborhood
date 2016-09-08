@@ -7,10 +7,6 @@ class CommunitiesController < WebApplicationController
     @communities = Community.all
   end
 
-  def present
-    @communities = Community.all
-  end
-
   # GET /communities/1
   # GET /communities/1.json
   def show
