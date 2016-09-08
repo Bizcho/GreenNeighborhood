@@ -10,7 +10,8 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
-    @comments = Comment.where(topic: @topic)
+    @comments = Comment.where(topic: @topic, respond: nil)
+    @responses = Comment.where(topic: @topic)
   end
 
   # GET /topics/new
