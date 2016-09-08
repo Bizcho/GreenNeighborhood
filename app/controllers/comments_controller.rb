@@ -10,6 +10,8 @@ class CommentsController < WebApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
+    @topic = Topic.find_by_id(@comment.topic_id)
+    redirect_to @topic
   end
 
   # GET /comments/new
@@ -69,6 +71,6 @@ class CommentsController < WebApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:message, :respond)
+      params.require(:comment).permit(:message, :respond, :topic_id)
     end
 end
