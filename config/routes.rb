@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :wifi_devices
   root 'switches#index'
 
