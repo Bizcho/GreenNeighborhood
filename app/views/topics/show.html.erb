@@ -14,9 +14,32 @@
 					<% @comments.each do |comment|%>
 						<div class="row">
 							<div class="col-sm-12 col-md-8 col-md-offset-2">
-								<div class="box box-solid bg-black">
-									<div class=" box-header with-border">
+								<div class="box box-solid">
+									<div class=" box-header with-border bg-black">
 										<%= comment.message %>
+									</div>
+									<div class="box-body">
+										<ul>
+											<% @responses.where(respond: comment.id).each do |respond|%>
+												<li>
+													<%= respond.message %>
+												</li>
+											<% end %>
+										</ul>
+									</div>
+									<div class="box-footer">
+										<%= form_for(Comment.new, html: { class: 'form-horizontal' }) do |f| %>
+											<div class="form-group col-md-ofset-1">
+												<div class="col-md-9 ">
+													<%= f.text_field :message, class: 'form-control' %>
+													<%= f.hidden_field :respond,  {value: comment.id, class: 'form-control'} %>
+													<%= f.hidden_field :topic_id,  {value: @topic.id, class: 'form-control'} %>
+												</div>
+												<div class="col-md-3">
+													<%= f.submit 'Send', class: 'btn bg-olive btn-block' %>
+												</div>
+											</div>
+										<% end %>
 									</div>
 								</div>
 							</div>

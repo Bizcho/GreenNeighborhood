@@ -6,5 +6,10 @@ class User < ActiveRecord::Base
 
   # Markable setup
   acts_as_marker
-  markable_as :involved
+  has_many :comments
+
+  # Including Gravtastic
+  include Gravtastic
+  gravtastic
+  
 end
