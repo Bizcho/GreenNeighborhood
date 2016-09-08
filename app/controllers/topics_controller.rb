@@ -10,6 +10,7 @@ class TopicsController < WebApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @comments = Comment.where(topic: @topic)
   end
 
   # GET /topics/new
