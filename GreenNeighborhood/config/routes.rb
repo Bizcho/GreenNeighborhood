@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :communities
+  resources :events
+  resources :comments
+  resources :topics
+  resources :services
+  resources :parks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
