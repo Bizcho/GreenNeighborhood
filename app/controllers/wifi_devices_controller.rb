@@ -1,4 +1,4 @@
-class WifiDevicesController < ApplicationController
+class WifiDevicesController < WebApplicationController
   before_action :set_wifi_device, only: [:show, :edit, :update, :destroy]
 
   # GET /wifi_devices

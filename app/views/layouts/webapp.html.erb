@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Green Neighborhood</title>
+	  <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application' %>
+	  <%= csrf_meta_tags %>
+	  <!-- Font Awesome Icons -->
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	  <!-- Ionicons -->
+	  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body class='skin-green-light sidebar-mini'>
+		<div class='wrapper'>
+			<%= render 'layouts/partials/header' %>
+			<%= render 'layouts/partials/main_sidebar' %>
+			<div class='content-wrapper'>
+				<section class='content-header'>
+				</section>
+				<section class='content'>
+					<%= render 'layouts/partials/alerts' %>
+					<%= yield %>
+				</section>
+			</div>
+			<footer class="main-footer">
+				<div class="pull-right hidden-xs">
+					Green Neighborhood
+				</div>
+				<strong>Copyright &copy; <%= Date.today.year %> <a href="#">Green</a>.</strong> All rights reserved.
+			</footer>
+		</div>
+	</body>
+</html>

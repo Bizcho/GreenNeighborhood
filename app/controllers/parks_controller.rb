@@ -1,4 +1,4 @@
-class ParksController < ApplicationController
+class ParksController < WebApplicationController
   before_action :set_park, only: [:show, :edit, :update, :destroy]
 
   # GET /parks
