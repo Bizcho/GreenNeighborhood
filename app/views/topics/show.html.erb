@@ -1,14 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class='box box-solid'>
+	<div class='box-body'>
+		<%= link_to '<i class="fa fa-mail-reply"></i> Back'.html_safe, topics_path, class: 'btn btn-app' %>
+		<%= link_to '<i class="fa fa-gear"></i> Edit'.html_safe, edit_topic_path(@topic), class: 'btn btn-app' %>
+		<%= link_to '<i class="fa fa-remove"></i> Destroy'.html_safe, @topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-maroon btn-app pull-right' %>
+		<hr>
 
-<p>
-  <strong>Name:</strong>
-  <%= @topic.name %>
-</p>
+		<div class="col-md-12">
+			<div class="box box-solid" > 
+				<header class="box-header with-border bg-olive" style="height:60px;" id="op5_header">
+					<h4><strong>Topic: </strong> <%= @topic.name %> </h4>
+				</header>
+				<div class="box-body"">
+					<% @comments.each do |comment|%>
+						<div class="row">
+							<div class="col-sm-12 col-md-8 col-md-offset-2">
+								<div class="box box-solid bg-black">
+									<div class=" box-header with-border">
+										<%= comment.message %>
+									</div>
+								</div>
+							</div>
+						</div>
+					<% end %>					
+				</div>
+			</div>
+		</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @topic.description %>
-</p>
-
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+	</div>
+</div>
