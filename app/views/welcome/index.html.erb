@@ -1,6 +1,3 @@
-<h1>Welcome#index</h1>
-
-
 <body id="page-top" class="index">
 
     <!-- Navigation -->
@@ -48,15 +45,7 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">BIENVENIDO</div>
-                <div class="intro-heading"></div>
-                <a href="#services" class="page-scroll btn btn-xl">INFORMACION</a>
-            </div>
-        </div>
-
-                <%=video_tag "Home-And-Away.mp4", {autoplay:true, loop:true}%>
+        <%=video_tag "Home-And-Away.mp4", {autoplay:true, loop:true}%>        
     </header>
 
     <!-- Services Section -->
@@ -124,6 +113,20 @@
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <%=image_tag "startup-framework.png",{class:"img-responsive", alt:""}%>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Startup Framework</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -599,7 +602,3 @@
     <script src="js/agency.min.js"></script>
 
 </body>
-
-
-
-<p>Find me in app/views/welcome/index.html.erb</p>
