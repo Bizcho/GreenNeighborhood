@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Park:</strong>
+  <%= @wifi_device.park_id %>
+</p>
+
+<p>
+  <strong>Alerted:</strong>
+  <%= @wifi_device.alerted %>
+</p>
+
+<%= link_to 'Edit', edit_wifi_device_path(@wifi_device) %> |
+<%= link_to 'Back', wifi_devices_path %>

@@ -1,0 +1,1 @@
+json.array! @wifi_devices, partial: 'wifi_devices/wifi_device', as: :wifi_device
