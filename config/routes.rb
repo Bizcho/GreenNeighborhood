@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+
   resources :wifi_devices
-  root 'switches#index'
 
   devise_for :users
   resources :communities
