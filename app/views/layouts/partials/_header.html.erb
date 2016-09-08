@@ -2,9 +2,9 @@
   <!-- Logo -->
   <a href="<%= root_path %>" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><%= image_tag 'ttco_logo.png', width: '30' %></span>
+    <span class="logo-mini">GreenNeighborhood</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><%= image_tag 'ttco_logotype.png', height: '20' %></span>
+    <span class="logo-lg">GreenNeighborhood</span>
   </a>
 
   <!-- Header Navbar -->
@@ -33,11 +33,6 @@
               <%= image_tag current_user.gravatar_url(default: 'identicon'), class: "img-circle", alt: "User Image" %>
               <p>
                 <%= current_user.email %>
-                <% if current_user.admin? %>
-                  <small>Administrator</small>
-                <% else %>
-                  <small>Operator</small>
-                <% end %>
               </p>
             </li>
             <!-- Menu Body -->
