@@ -2,9 +2,9 @@
   <!-- Logo -->
   <a href="<%= root_path %>" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><%= image_tag 'ttco_logo.png', width: '30' %></span>
+    <span class="logo-mini">GreenNeighborhood</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><%= image_tag 'ttco_logotype.png', height: '20' %></span>
+    <span class="logo-lg">GN</span>
   </a>
 
   <!-- Header Navbar -->
@@ -23,23 +23,11 @@
           <!-- Menu Toggle Button -->
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <!-- The user image in the navbar-->
-            <%= image_tag current_user.gravatar_url(default: 'identicon'), class: "user-image", alt: "User Image"%>
             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-            <span class="hidden-xs"><%= current_user.email %></span>
           </a>
           <ul class="dropdown-menu">
             <!-- The user image in the menu -->
-            <li class="user-header bg-navy">
-              <%= image_tag current_user.gravatar_url(default: 'identicon'), class: "img-circle", alt: "User Image" %>
-              <p>
-                <%= current_user.email %>
-                <% if current_user.admin? %>
-                  <small>Administrator</small>
-                <% else %>
-                  <small>Operator</small>
-                <% end %>
-              </p>
-            </li>
+           
             <!-- Menu Body -->
             <!-- <li class="user-body">
               <div class="col-xs-4 text-center">
@@ -53,11 +41,7 @@
               </div>
             </li> -->
             <!-- Menu Footer-->
-            <li class="user-footer">
-              <div class="pull-right">
-                <%= link_to 'Sign out', destroy_user_session_path, class: 'btn btn-default btn-flat', method: :delete %>
-              </div>
-            </li>
+            
           </ul>
         </li>
         <!-- Control Sidebar Toggle Button -->
