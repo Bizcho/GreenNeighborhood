@@ -44,13 +44,9 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
-                <div class="intro-heading">It's Nice To Meet You</div>
-                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
-            </div>
-        </div>
+
+                <%=video_tag "Home-And-Away.mp4", {autoplay:true, loop:true}%>
+
     </header>
 
     <!-- Services Section -->
@@ -108,7 +104,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                        <%=image_tag "roundicons.png",{class:"img-responsive", alt:""}%>                        
                     </a>
                     <div class="portfolio-caption">
                         <h4>Round Icons</h4>
