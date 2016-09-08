@@ -1,10 +1,13 @@
 class CommunitiesController < ApplicationController
-  layout 'web_application'
   before_action :set_community, only: [:show, :edit, :update, :destroy]
 
   # GET /communities
   # GET /communities.json
   def index
+    @communities = Community.all
+  end
+
+  def present
     @communities = Community.all
   end
 

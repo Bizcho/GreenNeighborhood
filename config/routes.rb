@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :wifi_devices
 
   devise_for :users
-  resources :communities
+  resources :communities do
+    collection do
+      get 'present'
+    end
+  end
   resources :events
   resources :comments
   resources :topics
