@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   resources :wifi_devices
+  root 'switches#index'
+
+  devise_for :users
   resources :communities
   resources :events
   resources :comments
   resources :topics
   resources :services
   resources :parks
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
