@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  root 'welcome#index'
 
   resources :wifi_devices
-  root 'switches#index'
 
   devise_for :users
   resources :communities
