@@ -1,0 +1,1 @@
+json.partial! "wifi_devices/wifi_device", wifi_device: @wifi_device

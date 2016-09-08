@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wifi_devices
   resources :communities
   resources :events
   resources :comments
