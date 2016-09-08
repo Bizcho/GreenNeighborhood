@@ -44,4 +44,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+#devise
+gem 'devise', '3.4.1'
+
+#db
 gem "mysql2"
