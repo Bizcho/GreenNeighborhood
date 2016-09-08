@@ -1,29 +1,13 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title, 'Topics' %>
 
-<h1>Listing Topics</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @topics.each do |topic| %>
-      <tr>
-        <td><%= topic.name %></td>
-        <td><%= topic.description %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>
+<% @topics.each do |topic| %>
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-sm-8">
+      <div class="box box-success box-solid">
+        <div class="box-header with-border"> <%= link_to topic.name, topic_path(topic) %></div>
+        <div class="box-body"> <%= topic.description %></div>
+      </div>
+    </div>
+  </div>
+<%end%>
+  
