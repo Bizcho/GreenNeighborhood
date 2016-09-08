@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'present_community' => 'present_community#index'
+  get 'present_community/index'
+
   root 'welcome#index'
 
   resources :wifi_devices
