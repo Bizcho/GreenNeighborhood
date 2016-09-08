@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 gem "mysql2"
+
+gem 'markable', git: 'git://github.com/chrome/markable.git', branch: 'master'
