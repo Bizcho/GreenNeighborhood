@@ -50,3 +50,5 @@ gem 'devise', '3.4.1'
 
 #db
 gem "mysql2"
+
+gem 'markable', git: 'git://github.com/chrome/markable.git', branch: 'master'
