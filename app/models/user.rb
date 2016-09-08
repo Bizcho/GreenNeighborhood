@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
 
   # Markable setup
   acts_as_marker
+
+  # Including Gravtastic
+  include Gravtastic
+  gravtastic
+  
 end

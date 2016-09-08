@@ -1,4 +1,4 @@
-class CommunitiesController < ApplicationController
+class CommunitiesController < WebApplicationController
   before_action :set_community, only: [:show, :edit, :update, :destroy]
 
   # GET /communities
